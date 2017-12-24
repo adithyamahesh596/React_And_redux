@@ -22,8 +22,8 @@ class LoadingDots extends Component {
   render() {
     let dots = this.state.frame % (this.props.dots + 1);
     let text = ' ';
-    while ( dots >0 ) {
-      text += ',';
+    while ( dots > 0 ) {
+      text += '.';
       dots--;
     }
     return <span {...this.props}>{text}&nbsp;</span>;
@@ -31,7 +31,7 @@ class LoadingDots extends Component {
 }
 
 LoadingDots.defaultProps = {
-  interval: 300, dots: 3
+  interval: 30000, dots: 3
 };
 
 LoadingDots.propTypes = {
